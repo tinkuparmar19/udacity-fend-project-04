@@ -15,7 +15,7 @@ function handleSubmit(event) {
         theText: formText
     };
     
-    fetch('/testing', {
+    fetch('http://localhost:8081/testing', {
         method: 'POST',
         body: JSON.stringify(reqBody),
         headers: {"Content-Type": "application/json"}
