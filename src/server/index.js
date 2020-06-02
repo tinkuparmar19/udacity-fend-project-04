@@ -28,7 +28,7 @@ app.post('/testing', async (req, res, next) => {
     try {
       var data = textapi.sentiment({
         //'text': 'John is a very good football player!'
-        'text': req.body.theText
+        'text': req.body.text
       }, function(error, response) {
         if (error === null) {
           console.log(response);
