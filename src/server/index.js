@@ -5,7 +5,7 @@ const aylien = require("aylien_textapi");
 const dotenv = require('dotenv');
 dotenv.config();
 const cors = require('cors');
-const bodyParser = require(body-parser);
+const bodyParser = require('body-parser');
 const app = express()
 app.use(express.json()) 
 app.use(express.static('dist'));
@@ -30,8 +30,8 @@ app.post('/testing', async (req, res, next) => {
         //'text': 'John is a very good football player!'
         'text': req.body.text
       }, function(error, response) {
-        if (error === null) {
-          console.log(response);
+        if (error) {
+          throw error;
           res.send(response);
         }
       });

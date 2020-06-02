@@ -30,7 +30,11 @@ function handleSubmit(event) {
         })
         .then(res => res.json())
         .then(function(res) {
-            document.getElementById('results').innerHTML = res.polarity
+            document.getElementById('polarity').innerHTML = res.polarity
+            document.getElementById('subjectivity').innerHTML = res.subjectivity
+            document.getElementById('polarity_confidence').innerHTML = res.polarity_confidence
+            document.getElementById('subjectivity_confidence').innerHTML = res.subjectivity_confidence
+            document.getElementById('entered_text').innerHTML = res.text
             console.log(res);
             alert(formText);
         })
