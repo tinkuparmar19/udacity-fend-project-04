@@ -4,9 +4,10 @@ const mockAPIResponse = require('./mockAPI.js')
 const aylien = require("aylien_textapi");
 const app = express()
 const dotenv = require('dotenv');
+const cors = require('cors');
 dotenv.config();
-app.use(express.static('dist'))
-
+app.use(express.static('dist'));
+app.use(cors());
 console.log(__dirname)
 
 // set aylien API credentias
