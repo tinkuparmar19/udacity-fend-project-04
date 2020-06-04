@@ -32,8 +32,9 @@ app.post('/testing', async (req, res, next) => {
       }, function(error, response) {
         if (error) {
           throw error;
-          res.send(response);
         }
+          res.send(response);
+        
       });
       //res.send(mockAPIResponse)
     } catch(error) {
